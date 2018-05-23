@@ -1,0 +1,57 @@
+
+<h3>UpdateYourDetails</h3>
+<div *ngIf="employee">
+  <h2>{{ employee.employeename | uppercase }} Details</h2>
+  <div><span>EmployeeId: </span>{{employee.employeeid}}</div>     
+</div>
+ <label>EmployeeName:
+  <input [(ngModel)]="employee.employeename" placeholder="employeename"/>
+  </label>
+
+  <div>
+      <label>EmployeeEmail:
+        <input [(ngModel)]="employee.email" placeholder="employeemail"/>
+      </label>
+      </div>
+
+      <div>
+          <label>EmployeePass:
+            <input [(ngModel)]="employee.pass" placeholder="pass"/>
+          </label>
+          </div>
+
+          <div>
+              <label>EmployeeAge:
+                <input [(ngModel)]="employee.age" placeholder="age"/>
+              </label>
+              </div>
+              <div>
+                  <label>EmployeeMobil:
+                    <input [(ngModel)]="employee.mobile" placeholder="mobile"/>
+                  </label>
+                  </div>
+                  <button (click)="save()">save</button>
+
+    <!-- 
+    
+    <div>
+    <label>EmployeePass:
+      <input [(ngModel)]="employee.pass" placeholder="pass"/>
+    </label>
+    </div>
+    <div>
+    <label>EmployeeAge:
+      <input [(ngModel)]="employee.age" placeholder="age"/>
+    </label>
+    </div>
+    <div>
+    <label>EmployeeMobil:
+      <input [(ngModel)]="employee.mobile" placeholder="mobile"/>
+    </label>
+    </div>
+  </iv>
+    <button (click)="save()">save</button>
+</div> -->
+
+
+

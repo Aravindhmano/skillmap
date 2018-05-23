@@ -1,0 +1,54 @@
+<div>
+  <table style="position: absolute;left: 500px;top: 150px">
+    
+  <tr>
+  <td><label>Employee id:</label></td>
+  <td> <input #employeeId></td>
+  </tr>
+
+  <tr>
+  <td><label>Employee name:</label>
+  <td><input #employeeName></td>
+ </tr>
+
+    <tr>
+  <td> <label>Email:</label></td>
+  <td> <input #email></td>
+    </tr>
+
+      
+    <tr>
+    <td> <label>Password:</label></td>
+    <td> <input #pass></td>
+    </tr>
+
+
+    <tr>
+    <td><label>Age:</label></td>
+    <td><input #age></td>
+    </tr>
+
+    <tr>
+          <td><label>Mobile:</label></td>
+         <td><input #mobile></td>
+    </tr>
+
+    <tr>
+    <td><label>Gender:</label></td>
+    <td><input #gender></td>
+    </tr>
+
+    <tr>
+      <td><label>Qualification:</label>
+      <td><input #qualification></td>
+    </tr>
+    
+          
+    <!-- (click) passes input value to add() and then clears the input -->
+    <td></td>
+    <td><button (click)="add(employeeId.value,employeeName.value,email.value,pass.value,age.value,mobile.value,gender.value,qualification.value)">
+      add
+    </button></td>
+
+  </table>
+    </div>

@@ -3,7 +3,7 @@
 <div *ngIf="employee">
   <h2>{{ employee.employeename | uppercase }} Details</h2>
   <div><span>EmployeeId: </span>{{employee.employeeid}}</div>     
-</div>
+
  <label>EmployeeName:
   <input [(ngModel)]="employee.employeename" placeholder="employeename"/>
   </label>
@@ -31,6 +31,7 @@
                   </label>
                   </div>
                   <button (click)="save()">save</button>
+</div>
 
     <!-- 
     

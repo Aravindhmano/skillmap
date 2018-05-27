@@ -21,8 +21,8 @@ export class EmployeeService {
    }
 
   private restUrl ='http://localhost:8086/MyRestDemo/api/employee';
-  private restdel ='http://localhost:8086/MyRestDemo/api/employee/delete';
-  private getUrl ='http://localhost:8086/MyRestDemo/api/employee/viewdata';
+ // private restdel ='http://localhost:8086/MyRestDemo/api/employee/delete';
+ // private getUrl ='http://localhost:8086/MyRestDemo/api/employee/viewdata';
 
 
   getEmployees (): Observable<EmployeeModel[]> {
@@ -45,7 +45,7 @@ export class EmployeeService {
 
   deleteEmployee (employee: EmployeeModel | number): Observable<EmployeeModel> {
     const id = typeof employee === 'number' ? employee : employee.employeeid;
-    const url = `${this.restdel}/${id }`;
+    const url = `${this.restUrl}/${id }`;
 
     return this.http.delete<EmployeeModel>(url, httpOptions)
   }
@@ -57,7 +57,7 @@ export class EmployeeService {
   }
 
    getid(employeeid: number): Observable<EmployeeModel> {
-    const url = `${this.getUrl}/${employeeid}`;
+    const url = `${this.restUrl}/${employeeid}`;
     return this.http.get<EmployeeModel>(url);
   }
   

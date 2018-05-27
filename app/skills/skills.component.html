@@ -1,0 +1,109 @@
+<div class="form-group">
+  <label>Skill id:
+    <input #skillId  class="form-control">
+  </label><br/>
+  <label>EmployeeId:
+    <input #employeeid class="form-control">
+  </label><br/>
+  <label>EmployeeName:
+    <input #employeename class="form-control">
+  </label><br/>
+  <label>SkillName:
+    <input #skillName class="form-control">
+  </label><br/>
+  <label>Certifications:
+    <input #certifications class="form-control">
+  </label><br/>
+  <label>StudentsTrained:
+    <input #studentsTrained class="form-control">
+  </label><br/>
+  <label>StudentPlaced:
+    <input #studentPlaced class="form-control">
+  </label><br/>
+ 
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(skillId.value,employeeid.value,employeename.value,skillName.value,certifications.value,studentsTrained.value,studentPlaced.value)">
+    ADD
+  </button>
+  
+</div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <div class="container">
+
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <div class="table-responsive">
+
+              <table id="mytable" class="table table-bordred table-striped">
+
+                   <thead>
+
+                        <th>SkillId</th>
+
+                        <th>EmployeeId</th>
+
+                        <th>EmployeeName</th>
+
+                        <th>SkillName</th>
+
+                        <th>certifications</th>
+
+                        <th>studentsTrained</th>
+                        
+                        <th>StudentPlaced</th>
+
+                       
+                        <th>Edit</th>
+
+                        <th>Delete</th>
+
+                   </thead>
+
+                   <tbody>
+
+                    <tr *ngFor="let skills of empls ">
+
+                        <td>{{skills.skillId}}</td> 
+
+                        <td>{{skills.employeeid}}</td>
+
+                        <td>{{skills.employeename}}</td>
+
+                        <td>{{skills.skillName}}</td>
+
+                        <td>{{skills.certifications}}</td>
+
+                        <td>{{skills.studentsTrained}}</td>
+
+                           <td>{{skills.studentPlaced}}</td>
+
+                           
+                        
+                     
+                        <td>Edit</td>
+                    
+               
+                      
+                        <td>Delete</td>
+
+                    </tr>
+
+   
+
+                   </tbody>
+
+            </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

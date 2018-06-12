@@ -1,6 +1,6 @@
 export class Skills
  {
-  public skillId:number;
+  //public skillId:number;
   public employeeid:number;
   public employeename:string;
   public skillName:string;

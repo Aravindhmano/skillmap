@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div *ngIf="skills">
+  <table>
+    <caption><h4 style="color:indianred;font-size:20px;text-decoration-line:underline;">Update {{ skills.employeeid | uppercase }} Details</h4></caption>
+    <!--<tr><td>Skill Id:</td><td>{{skill.skillId}}</td></tr>-->
+    <tr><td>Employee Id:</td><td><input [(ngModel)]="skills.employeeid" placeholder="employeeId"/></td></tr>
+    <tr><td>Employee name:</td><td><input [(ngModel)]="skills.employeename" placeholder="employeename"/></td></tr>
+    <tr><td>Employee Skills:</td><td><input [(ngModel)]="skills.skillName" placeholder="skillName"/></td></tr>
+    <tr><td>Certification:</td><td><input [(ngModel)]="skills.certifications" placeholder="Certification"/></td></tr>
+    <tr><td>Students Trained:</td><td><input [(ngModel)]="skills.studentsTrained" placeholder="studentsTrained"/></td></tr>
+    <tr><td>Students Placed:</td><td><input [(ngModel)]="skills.studentPlaced" placeholder="studentPlaced"/></td></tr>
+    <tr><td>  <button  (click)="goBack()">Back to Main</button></td><td><button  (click)="save()">Update Skills</button></td></tr>
+  </table>
+</div>

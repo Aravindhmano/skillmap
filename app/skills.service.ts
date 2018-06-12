@@ -29,6 +29,20 @@ getAll(): Observable<Skills[]> {
     return this.http.post<Skills>(this.strUrl, skill, httpOptions);
     
   }
+  deleteSkill (skills: Skills | number): Observable<Skills> {
+    //const url='http://localhost:8080/CEBProjectRestDemo/api/employee/'+employee;
+    const id = typeof skills === 'number' ? skills : skills.employeeid;
+    const url = `${this.strUrl}/${id}`;
 
+    return this.http.delete<Skills>(url, httpOptions)
+  }
+  update(empls:Skills): Observable<any> {
+    return this.http.put(this.strUrl,empls, httpOptions);
+    
+  }
+   getid(employeeid: number): Observable<Skills> {
+    const url = `${this.strUrl}/${employeeid}`;
+    return this.http.get<Skills>(url);
+  }
   constructor(private http: HttpClient) { }
 }

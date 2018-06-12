@@ -19,13 +19,13 @@ getAll(): void {
   this.skillsserve.getAll().subscribe(empls => this.empls = empls);
 }
 
-add(skillId:number,employeeid:number,employeename:string,skillName:string,certifications:string,studentsTrained:number,studentPlaced:number): void {
+add(employeeid:number,employeename:string,skillName:string,certifications:string,studentsTrained:number,studentPlaced:number): void {
    // employeename=employeename;
    //emp.employeeid=employeeid;
    this.empl=new Skills();
-   if(skillId!=0)
+   if(employeeid!=0)
    {
-  this.empl.skillId=skillId;
+  
   this.empl.employeeid=employeeid;
   this.empl.employeename=employeename;
   this.empl.skillName=skillName;
@@ -42,7 +42,11 @@ add(skillId:number,employeeid:number,employeename:string,skillName:string,certif
       });
    }
   }
-
+  delete(skills:Skills): void {
+ 
+    this.empls = this.empls.filter(h => h !== skills);
+      this.skillsserve.deleteSkill(skills).subscribe();
+  }
 
   constructor(private skillsserve:SkillsService) { }
 

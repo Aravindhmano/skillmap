@@ -1,7 +1,7 @@
 <div class="form-group">
-  <label>Skill id:
-    <input #skillId  class="form-control">
-  </label><br/>
+  <!-- <label>Skill id: -->
+<!-- <input #skillId  class="form-control"> -->
+  <!-- </label><br/> -->
   <label>EmployeeId:
     <input #employeeid class="form-control">
   </label><br/>
@@ -22,7 +22,7 @@
   </label><br/>
  
   <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(skillId.value,employeeid.value,employeename.value,skillName.value,certifications.value,studentsTrained.value,studentPlaced.value)">
+  <button (click)="add(employeeid.value,employeename.value,skillName.value,certifications.value,studentsTrained.value,studentPlaced.value)">
     ADD
   </button>
   
@@ -44,7 +44,7 @@
 
                    <thead>
 
-                        <th>SkillId</th>
+                        <!-- <th>SkillId</th> -->
 
                         <th>EmployeeId</th>
 
@@ -69,7 +69,7 @@
 
                     <tr *ngFor="let skills of empls ">
 
-                        <td>{{skills.skillId}}</td> 
+                        <!-- <td>{{skills.skillId}}</td>  -->
 
                         <td>{{skills.employeeid}}</td>
 
@@ -86,11 +86,15 @@
                            
                         
                      
-                        <td>Edit</td>
+                           <td><a class="btn btn-info btn-sm" data-toggle="modal" routerLink="/details/{{skills.employeeid}}">Edit</a></td>
                     
                
                       
-                        <td>Delete</td>
+                           <td><button (click)="delete(skills)" class="btn btn-danger btn-sm" data-toggle="modal">Delete</button></td> 
+                    
+               
+                      
+                       
 
                     </tr>
 

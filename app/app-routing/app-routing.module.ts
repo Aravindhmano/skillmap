@@ -6,6 +6,7 @@ import { RouterModule,Router, Routes} from '@angular/router';
 import { AppComponent} from '../app.component';
 import { UpdateEmployeeComponent } from '../update-employee/update-employee.component';
 import {SkillsComponent} from '../skills/skills.component';
+import {SkillsDetailsComponent} from '../skills-details/skills-details.component';
 
 
 
@@ -14,6 +15,8 @@ const routes: Routes = [
   { path: 'viewemployee', component: AddemployeeComponent },
   { path: 'update/:employeeid', component:UpdateEmployeeComponent},
   { path: 'skills', component:SkillsComponent},
+  { path: 'details/:employeeid', component:SkillsDetailsComponent},
+  { path: 'SkillsDetailsComponent', component:SkillsDetailsComponent},
 ];
 
 

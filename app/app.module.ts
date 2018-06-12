@@ -9,6 +9,7 @@ import { AddemployeeComponent } from './addemployee/addemployee.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import {SkillsComponent} from './skills/skills.component';
+import{SkillsDetailsComponent} from './skills-details/skills-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {SkillsComponent} from './skills/skills.component';
     RegisterComponent,
     AddemployeeComponent,
     UpdateEmployeeComponent,
-    SkillsComponent
+    SkillsComponent,
+    SkillsDetailsComponent
   ],
   imports: [
     BrowserModule,
